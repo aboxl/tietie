@@ -7,100 +7,162 @@
 		·使用方法：直接将视频网址复制，粘贴进去即可。
 		·示例网址：https://v.qq.com/x/cover/mzc00200q3ctjw0.html
 		
-	/** 版本信息 ** /	
+	/** 版本信息 ** /
+		V3.0：本次更新，解决了移动设备的自适应
 		V2.0：本次更新解决了腾讯视频VIP视频地址过长无法解析的问题
 		>>代码更新于：2020-6-12
-		
 -->
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>正版软件</title>
-		<!--/* 去除链接的下划线 * /-->
+		<meta charset="utf-8">
+		<title>VIP视频--铁铁出品</title>
+		<!-- 自适应屏幕 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--/* 去除链接的下划线* /-->
 		<style type="text/css">a {text-decoration: none}</style>
+		<!-- 设置网页标题图标 --> 
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<!-- 引入CSS文件 -->
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="UTF-8"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				font-family: montserrat;
+				box-sizing: border-box;
+			}
+			body{
+				min-height: 100vh;
+				background-image: linear-gradient(120deg,#3498db,#8e44ad);
+				
+			}
+
+			.login-form{
+				width: 360px;
+				background: #f1f1f1;
+				height: 580px;
+				padding: 80px 40px;
+				border-radius: 10px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+					
+			}
+
+			.login-form h1{
+				text-align: center;
+				margin-bottom: 60px;
+			}
+
+			.txtb{
+				border-bottom: 2px solid #adadad;
+			position: relative;
+				margin: 30px 0;
+			}
+
+			.txtb input{
+				font-size: 15px;
+				color: #333;
+				border: none;
+				width: 100%;
+				outline: none; 
+				background: none;
+				padding: 0 5px;
+				height: 40px;
+			}
+
+
+			.txtb span::before{
+				content: attr(data-placeholder);
+				position: absolute;
+				top: 50%;
+				left: 5px;
+				color: #ADADAD;
+				transform: translateY(-50%);
+				z-index: -1;
+				transition: 0.5s;
+			}
+
+			.txtb span::after{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				/*background: linear-gradient(120deg,#3498db,#8e44ad);*/
+				transition: 0.5s;
+			}
+
+			.focus +span::before{
+				top: -5px;
+			}
+
+			.focus +span::after{
+				width: 100%;
+			}
+
+
+			.logbtn{
+				display: block;
+				width: 100%;
+				height: 50px;
+				border: none;
+				background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+				background-size: 200%;
+				color: #FFFFFF;
+				outline: none;
+				cursor: pointer;
+				transition: .5s;
+				font-size: 22px;
+			}
+
+			.logbtn:hover{
+				background-position: right;
+			}
+
+			.bottom-text{
+				margin-top: 60px;
+				text-align: center;
+				font-size: 18px;
+			}
+		</style>
 	</head>
-	<!--/*  CSS样式表  * /-->
-	<style>
-		*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Opan sans' , sans-serif;}
-			
-		body{display: flex;justify-content: center;
-			align-items: center;min-height: 100vh;background: black;}
-			
-		.square{position: relative;width: 400px;height: 400px;display: flex;
-			justify-content: center;align-items: center;}
-			
-		.square span:nth-child(1)
-			{position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 2px solid #FFFFFF;
-				border-radius: 38% 62% 63% 37% / 41% 44% 56% 59% ;
-				transition: 0.5s;animation: animate 6s linear infinite;}
-		
-		.square:hover span:nth-child(1)
-			{border: none;background: rgb(0,255,0,0.8);}
-
-		.square span:nth-child(2)
-			{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-				border: 2px solid #FFFFFF;border-radius: 38% 62% 63% 37% / 41% 44% 56% 59% ;
-				transition: 0.5s;animation: animate 4s linear infinite;}
-		
-		.square:hover span:nth-child(2)
-			{border: none;background: rgb(0,0,255,0.8);}
-
-		.square span:nth-child(3)
-			{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
-				border: 2px solid #FFFFFF;border-radius: 38% 62% 63% 37% / 41% 44% 56% 59% ;
-				transition: 0.5s;animation: animate2 10s linear infinite;}
-			
-		.square:hover span:nth-child(3)
-			{border: none;background: rgb(255,0,0,0.8);}
-
-		@keyframes animate{
-			0%	{transform: rotate(0deg);}
-			100%{transform: rotate(360deg);}}	
-		
-		@keyframes animate2{
-			0%	{transform: rotate(360deg);}
-			100%{transform: rotate(0deg);}}
-
-		.content{position: relative;padding: 40px 60px;color: #FFFFFF;
-				text-align: center;transition: 0.5s;z-index: 1000;}
-
-		.content a{position: relative;display: inline-block;margin-top: 10px;
-			border: 2px solid #FFFFFF;padding: 6px 18px;text-decoration: none;
-			color: #FFFFFF;font-weight: 600;border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;}
-		
-		.content a:hover{background: #FFFFFF;color: #333333;}
-
-		.one{position: relative;width: 30%;height: 500px;position: relative;
-			padding: 40px 60px;color: #FFFFFF;text-align: center;transition: 0.5s;z-index: 1000;}
-
-		.one a{position: relative;display: inline-block;margin-top: 10px;
-			border: 2px solid #FFFFFF;padding: 6px 18px;text-decoration: none;
-			color: #FFFFFF;font-weight: 600;border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;}
-		
-		.one a:hover{background: #FFFFFF;color: #333333;}
-	</style>
-	
 	<body>
 		
-		<div class="square">
-			<span></span>
-			<span></span>
-			<span></span>
-				<div class="content">
-					<h2>铁铁VIP</h2>
-					<h3>全网视频，免费看！</h3>
-					<br />
-					<p>支持腾讯，优酷，爱奇艺，PPTV，搜狐，芒果，乐视！</p>
-					<p>解析仅支持学习交流，勿用非法用途！</p>
-					<br /><br />
-					<form name="input" action="https://jiexi.380k.com" method="get">
-					<input type="text" name="url" >
-					<input type="submit" value="铁一下">
-					</form>
-
-				</div>	
+		<form name="input" action="https://jiexi.380k.com" method="get" class="login-form">
+			<h1>铁铁VIP3.0</h1>
+			<center>
+			<h2>全网视频，免费看！</h2><br />
+			<p>支持腾讯，优酷，爱奇艺，PPTV，搜狐，芒果，乐视！</p>
+			<p>解析仅支持学习交流，勿用非法用途！</p>
+			</center>
+			<div class="txtb">
+				<input type="text" name="url" />
+				<span data-placeholder="在此输入视频地址"></span>
 			</div>
+			<input type="submit" class="logbtn"  value="搜索"/>
 			
+				
+					
+			<div class="bottom-text">
+				
+			</div>
+		</form>
+		
+	<script type="text/javascript">
+		$(".txtb input").on("focus",function(){
+			$(this).addClass("focus");
+		});
+		
+		$(".txtb input").on("blur",function(){
+			if($(this).val() == "")
+			$(this).removeClass("focus");
+		});
+		
+	</script>	
+		
 		
 	</body>
 </html>
