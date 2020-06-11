@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+	/** 免责声明 ** /
+		>>本代码仅供大家学习交流使用，请勿用于非法或商业用途。
+		>>本代码解析视频均来自互联网收集而来，版权归原创者所有。
+		
+		·使用方法：直接将视频网址复制，粘贴进去即可。
+		·示例网址：https://v.qq.com/x/cover/mzc00200q3ctjw0.html
+		
+	/** 版本信息 ** /	
+		V2.0：本次更新解决了腾讯视频VIP视频地址过长无法解析的问题
+		>>代码更新于：2020-6-12
+		
+-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正版软件</title>
+		<!--/* 去除链接的下划线 * /-->
+		<style type="text/css">a {text-decoration: none}</style>
+	</head>
+	<!--/*  CSS样式表  * /-->
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Opan sans' , sans-serif;}
+			
+		body{display: flex;justify-content: center;
+			align-items: center;min-height: 100vh;background: black;}
+			
+		.square{position: relative;width: 400px;height: 400px;display: flex;
+			justify-content: center;align-items: center;}
+			
+		.square span:nth-child(1)
+			{position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 2px solid #FFFFFF;
+				border-radius: 38% 62% 63% 37% / 41% 44% 56% 59% ;
+				transition: 0.5s;animation: animate 6s linear infinite;}
+		
+		.square:hover span:nth-child(1)
+			{border: none;background: rgb(0,255,0,0.8);}
+
+		.square span:nth-child(2)
+			{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+				border: 2px solid #FFFFFF;border-radius: 38% 62% 63% 37% / 41% 44% 56% 59% ;
+				transition: 0.5s;animation: animate 4s linear infinite;}
+		
+		.square:hover span:nth-child(2)
+			{border: none;background: rgb(0,0,255,0.8);}
+
+		.square span:nth-child(3)
+			{position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+				border: 2px solid #FFFFFF;border-radius: 38% 62% 63% 37% / 41% 44% 56% 59% ;
+				transition: 0.5s;animation: animate2 10s linear infinite;}
+			
+		.square:hover span:nth-child(3)
+			{border: none;background: rgb(255,0,0,0.8);}
+
+		@keyframes animate{
+			0%	{transform: rotate(0deg);}
+			100%{transform: rotate(360deg);}}	
+		
+		@keyframes animate2{
+			0%	{transform: rotate(360deg);}
+			100%{transform: rotate(0deg);}}
+
+		.content{position: relative;padding: 40px 60px;color: #FFFFFF;
+				text-align: center;transition: 0.5s;z-index: 1000;}
+
+		.content a{position: relative;display: inline-block;margin-top: 10px;
+			border: 2px solid #FFFFFF;padding: 6px 18px;text-decoration: none;
+			color: #FFFFFF;font-weight: 600;border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;}
+		
+		.content a:hover{background: #FFFFFF;color: #333333;}
+
+		.one{position: relative;width: 30%;height: 500px;position: relative;
+			padding: 40px 60px;color: #FFFFFF;text-align: center;transition: 0.5s;z-index: 1000;}
+
+		.one a{position: relative;display: inline-block;margin-top: 10px;
+			border: 2px solid #FFFFFF;padding: 6px 18px;text-decoration: none;
+			color: #FFFFFF;font-weight: 600;border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;}
+		
+		.one a:hover{background: #FFFFFF;color: #333333;}
+	</style>
+	
+	<body>
+		
+		<div class="square">
+			<span></span>
+			<span></span>
+			<span></span>
+				<div class="content">
+					<h2>铁铁VIP</h2>
+					<h3>全网视频，免费看！</h3>
+					<br />
+					<p>支持腾讯，优酷，爱奇艺，PPTV，搜狐，芒果，乐视！</p>
+					<p>解析仅支持学习交流，勿用非法用途！</p>
+					<br /><br />
+					<form name="input" action="https://jiexi.380k.com" method="get">
+					<input type="text" name="url" >
+					<input type="submit" value="铁一下">
+					</form>
+
+				</div>	
+			</div>
+			
+		
+	</body>
+</html>
