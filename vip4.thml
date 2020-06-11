@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<head>
+<html lang="zh-cn">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset=utf-8"utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>VIP解析--铁铁</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}',16,16,'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'),0,{}))</script>
+</head>
+
+ <body style="background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);background-attachment: fixed;background-repeat: no-repeat;background-size: cover;-moz-background-size: cover;"><div class="container">
+
+
+ <style>
+body{
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.container {
+	  max-width: 680px;
+	  padding: 15px;
+	  margin: 0 auto;
+	}
+	
+</style>
+
+ <body>
+<section id="home" class="pfblock-image screen-height">
+<div class="panel panel-primary" style="margin:1% 1% 1% 1%;background: rgba(255, 251, 251, 0.7);text-align:center;">
+      <div class="panel-heading bk-bg-primary">
+       <h6><span class="panel-title">铁铁VIP4.0</span></h6>全网视频，免费看！</h6></div>
+		<p>支持腾讯，优酷，爱奇艺，PPTV，搜狐，芒果，乐视！</p>
+		<p>解析仅支持学习交流，勿用非法用途！</p>
+        
+	<table class="table table-bordered">
+	<tbody>
+	   <div class="col-md-14 column">
+    <div class="panel panel-default">
+     <div id="kj" class="panel-body">
+      <iframe src="https://api.dujin.org/bing/1920.php" id="player" width="100%" height="400px" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+     </div>
+    </div>
+   </div>
+		<tr>
+		</script>
+
+
+   <div class="col-md-14 column">
+    <form method="post" id="khname">
+     <div class="input-group" style="width: 100%;">
+      <span class="input-group-addon input-lg" style="width: 80px; color:red;">解析接口</span>
+      <select class="form-control input-lg" id="jk">
+
+
+
+
+<option  value="http://www.wmxz.wang/video.php?url=">VIP通道①</option>
+<option  value="http://yyygwz.com/index.php?url=">VIP通道②</option>
+<option  value="http://yun.mt2t.com/yun?url=">VIP通道③</option>
+<option  value="http://www.0335haibo.com/tong.php?url=">VIP通道④</option>
+<option  value="http://000o.cc/jx/ty.php?url=">VIP通道⑤</option>
+
+
+</select>
+     </div>
+     <br>
+     <div class="input-group" style="width: 100%;">
+      <span class="input-group-addon input-lg" style="width: 80px;">视频链接</span>
+      <input class="form-control input-lg" type="search" placeholder="输入视频页面链接" id="url">
+     </div>
+     <br>
+     <div>
+	   <div class="panel-body">
+      <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">开始播放</button>
+     </div>
+	 </br>
+	 <p>声明：所有资源均来源第三方资源，本站并不提供影片资源存储，也不参与录制、上传相关视频，视频版权归属其合法持有人所有。</p>
+<div>
+
+</div>
+</body>
+</html></body>
+</html>
