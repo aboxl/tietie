@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+	/** 免责声明 ** /
+		>>本代码仅供大家学习交流使用，请勿用于非法或商业用途。
+		>>本代码解析视频均来自互联网收集而来，版权归原创者所有。
+		
+		·使用方法：直接将视频网址复制，粘贴进去即可。
+		·示例网址：https://v.qq.com/x/cover/mzc00200q3ctjw0.html
+		
+	/** 版本信息 ** /
+		V3.0：本次更新，解决了移动设备的自适应
+		V2.0：本次更新解决了腾讯视频VIP视频地址过长无法解析的问题
+		>>代码更新于：2020-6-12
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VIP视频--铁铁出品</title>
+		<!-- 自适应屏幕 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--/* 去除链接的下划线* /-->
+		<style type="text/css">a {text-decoration: none}</style>
+		<!-- 设置网页标题图标 --> 
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<!-- 引入CSS文件 -->
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="UTF-8"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				font-family: montserrat;
+				box-sizing: border-box;
+			}
+			body{
+				min-height: 100vh;
+				background-image: linear-gradient(120deg,#3498db,#8e44ad);
+				
+			}
+
+			.login-form{
+				width: 360px;
+				background: #f1f1f1;
+				height: 580px;
+				padding: 80px 40px;
+				border-radius: 10px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+					
+			}
+
+			.login-form h1{
+				text-align: center;
+				margin-bottom: 60px;
+			}
+
+			.txtb{
+				border-bottom: 2px solid #adadad;
+			position: relative;
+				margin: 30px 0;
+			}
+
+			.txtb input{
+				font-size: 15px;
+				color: #333;
+				border: none;
+				width: 100%;
+				outline: none; 
+				background: none;
+				padding: 0 5px;
+				height: 40px;
+			}
+
+
+			.txtb span::before{
+				content: attr(data-placeholder);
+				position: absolute;
+				top: 50%;
+				left: 5px;
+				color: #ADADAD;
+				transform: translateY(-50%);
+				z-index: -1;
+				transition: 0.5s;
+			}
+
+			.txtb span::after{
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				/*background: linear-gradient(120deg,#3498db,#8e44ad);*/
+				transition: 0.5s;
+			}
+
+			.focus +span::before{
+				top: -5px;
+			}
+
+			.focus +span::after{
+				width: 100%;
+			}
+
+
+			.logbtn{
+				display: block;
+				width: 100%;
+				height: 50px;
+				border: none;
+				background: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+				background-size: 200%;
+				color: #FFFFFF;
+				outline: none;
+				cursor: pointer;
+				transition: .5s;
+				font-size: 22px;
+			}
+
+			.logbtn:hover{
+				background-position: right;
+			}
+
+			.bottom-text{
+				margin-top: 60px;
+				text-align: center;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<form name="input" action="https://jiexi.380k.com" method="get" class="login-form">
+			<h1>铁铁VIP4.0</h1>
+			<center>
+			<h2>全网视频，免费看！</h2><br />
+			<p>支持腾讯，优酷，爱奇艺，PPTV，搜狐，芒果，乐视！</p>
+			<p>解析仅支持学习交流，勿用非法用途！</p>
+			</center>
+			<div class="txtb">
+				<input type="text" name="url" />
+				<span data-placeholder="在此输入视频地址"></span>
+			</div>
+			<input type="submit" class="logbtn"  value="搜索"/>
+			
+			<p>所有资源均来源第三方资源，本站并不提供影片资源存储，也不参与录制、上传相关视频，视频版权归属其合法持有人所有。
+				【网站导航，已上架！<a href="https://sharebox2019.github.io/jianavi/">立即体验！</a>】</p>
+			
+			
+			<div class="bottom-text">
+			
+			</div>
+		</form>
+		
+	<script type="text/javascript">
+		$(".txtb input").on("focus",function(){
+			$(this).addClass("focus");
+		});
+		
+		$(".txtb input").on("blur",function(){
+			if($(this).val() == "")
+			$(this).removeClass("focus");
+		});
+		
+	</script>	
+		
+		
+	</body>
+</html>
